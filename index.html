@@ -2,16 +2,90 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+  <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pizza Order</title>
 </head>
 <body>
-    
+   
+    </div>
+        <fieldset>
+            <b>Choose Size(s):</b><br>
+            <label>Small
+            <input type="checkbox" name="Steak" ></label>;
+            <label>Medium
+            <input type="checkbox" name="Chicken" ></label>;
+            <label>Large
+            <input type="checkbox" name="Sushi"  ></label>
+            <br><br>
+            <strong>Your total is:</strong>
+            <input type="text" name="total">
+        </fieldset>
+        <br>
+        <fieldset>
+            <b>Choose kind of crust(S)</b><br>
+                <label>Crispy
+                <input type="checkbox"  ></label>;
+                <label>Stuffed
+                <input type="checkbox"  ></label>;
+                <label>Glutten-free
+                <input type="checkbox"  ></label>
+                </br>
+        </fieldset>
+        
+            <br><br>
+        <fieldset>
+            <b>Extra Toppings (only one selection allowed):</b> <br>
+            <label><input type="radio" name="Sauce" value="0.00"> None</label>
+            <br>
+            <label><input name="Sauce" type="radio"  value="1.00"> Extra Cheese</label>
+            <br>
+            <label><input type="radio" name="Sauce" value="2.00"> Vegetarian</label>
+            <br>
+            <label><input type="radio" name="Sauce" value="3.00"> Meat</label>
+            <br><br>
+            <strong>Your total is:</strong>
+            <input type="text" name="total">
+        </fieldset>
+        
+            <br>
+            <br>
+        <fieldset>
+          <b>Quantity:</b>
+          <select name="quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          </select>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <label>
+                <h6><strong>delivery or pickup?</strong> </h6>
+                <input type="radio" name="delivery option" value="delivery">Delivery</label>
+                <input type="radio" name="delivery option" value="pickup">pickup</label>
+            </label>
+        </fieldset>
+        
+            <br>
+            <br>
+            <input type="hidden" name="calculatedTotal" value="0">
+            <input type="hidden" name="previouslySelectedRadioButton" value="0">
+            <input type="hidden" name="previouslySelectedQuantity" value="1">
+            <strong>Your total is:</strong>
+            <input type="text" name="total">
+            <input type="reset">
+          </form>
+        
+        </div>
+       
 </body>
 </html>
