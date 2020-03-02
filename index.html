@@ -27,19 +27,21 @@
             </table>
         </div>
         <!-- </div> -->
-       git 
-            <br>
+        <form method="POST" name="selectionForm" id ='pizz'>
             <fieldset>
-                
-                <b>Extra crusts (only one selection allowed):</b> <br>
-                <label>Crispy
-                    <input type="radio" name = "crust" value ="100"></label>;
-                <label>Stuffed
-                    <input type="radio" name = "crust" value ="250"></label>;
-                <label>glutten-free
-                    <input type="radio" name = "crust" value ="150"></label>
-                </br>
+                <b>Choose Size(s):</b><br>
+                <label>Small
+                    <input type="checkbox" name="size" value='600' ></label>;
+                <label>Medium
+                    <input type="checkbox" name="size" value='1000'></label>;
+                <label>Large
+                    <input type="checkbox" name="size" value='1500' ></label>
+                <br><br>
+                <strong>Your total is:</strong>
+                <input type="text" name="total" id="sizes">
             </fieldset>
+            <br>
+            
 
             <br><br>
             <fieldset>
