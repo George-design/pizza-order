@@ -12,8 +12,56 @@ PizzaPrice.prototype.calculatePizzaPrice = function() {
 
 
 
+$(document).ready( function ()
+{
+$('#pizz').submit(function(event){
+	
+	let selectedPizzaCrust = parseInt($("input[name = 'crust']:checked").val())
 
-});
-  
+	 let selectedPizzaSizes = []
+	 let totalSizePrice = 0
+	 let toppingsTotalPrice = 0
+	 $("input[name='size']:checked").each(function(){
+		 selectedPizzaSizes.push(parseInt($(this).val()))
+	 })
 
-});
+	 totalSizePrice = selectedPizzaSizes.reduce((totalSizePrice,element) => totalSizePrice + element)
+	//  console.log(totalSizePrice)
+
+
+	let selectedToppingPrices =[]
+	$("input[name='Sauce']:checked").each(function(){
+		selectedToppingPrices.push(parseInt($(this).val()))
+	})
+
+	toppingsTotalPrice = selectedToppingPrices.reduce((toppingsTotalPrice,topping) => toppingsTotalPrice + topping)
+	// console.log(toppingsTotalPrice)
+
+	let pizzaQuantity = selectedPizzaSizes.length
+
+	//Create a new instance of the object PizzaPrice
+	let newPizza = new PizzaPrice(totalSizePrice, selectedPizzaCrust,toppingsTotalPrice, pizzaQuantity)
+	let pizzaCost = newPizza.calculatePizzaPrice()
+
+
+	//Get the delivery info
+	let delivery = $("input[name='delivery']:checked").val()
+	let deliveryCost=0 
+
+	function getDelivery(){
+		if (delivery ==='delivery'){
+			let location = prompt("Enter the location of delivery")
+			deliveryCost=250
+		}else{
+			return false
+		}
+	}
+
+		getDelivery()
+	pizzaCost += deliveryCost
+
+	// console.log(pizzaCost)
+
+
+
+	
