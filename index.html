@@ -14,5 +14,89 @@
     <title>Pizza Order</title>
 </head>
 
+<body>
+    <div class="container">
+        <!-- <div class="row"> -->
+        <div style="width: 430px; margin: auto;">
+            <table>
+                <tr>
+                    <td></td>
+
+                    
+                </tr>
+            </table>
+        </div>
+        <!-- </div> -->
+        <form method="POST" name="selectionForm" id ='pizz'>
+            <fieldset>
+                <b>Choose Size(s):</b><br>
+                <label>Small
+                    <input type="checkbox" name="size" value='600' ></label>;
+                <label>Medium
+                    <input type="checkbox" name="size" value='1000'></label>;
+                <label>Large
+                    <input type="checkbox" name="size" value='1500' ></label>
+                <br><br>
+                <strong>Your total is:</strong>
+                <input type="text" name="total" id="sizes">
+            </fieldset>
+            <br>
+            <fieldset>
+                
+                <b>Extra crusts (only one selection allowed):</b> <br>
+                <label>Crispy
+                    <input type="radio" name = "crust" value ="100"></label>;
+                <label>Stuffed
+                    <input type="radio" name = "crust" value ="250"></label>;
+                <label>glutten-free
+                    <input type="radio" name = "crust" value ="150"></label>
+                </br>
+            </fieldset>
+
+            <br><br>
+            <fieldset>
+                <b>choose kind of topping(S)</b><br>
+                <label><input type="checkbox" name="Sauce" value="0"> None</label>
+                <br>
+                <label><input name="Sauce" type="checkbox" value="100"> Extra Cheese</label>
+                <br>
+                <label><input type="checkbox" name="Sauce" value="50"> Vegetarian</label>
+                <br>
+                <label><input type="checkbox" name="Sauce" value="80"> Meat</label>
+                <br><br>
+                <strong>Your total is:</strong>
+                <input type="text" name="total" id="toppings">
+            </fieldset>
+
+            <br>
+            <br>
+            <fieldset>
+                <b>Quantity:</b>
+         <input type='number' name = "quantity" id='quantity'>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <label>
+                    <h6><strong>delivery or pickup?</strong> </h6>
+                    <input type="radio" name="delivery" value="delivery">Delivery
+                </label>
+                <input type="radio" name="delivery" value="pickup">pickup</label>
+                </label>
+            </fieldset>
+
+            <br>
+            <br>
+            <input type="hidden" name="calculatedTotal" value="0">
+            <input type="hidden" name="previouslySelectedRadioButton" value="0">
+            <input type="hidden" name="previouslySelectedQuantity" value="1">
+            <strong>Your total is:</strong>
+            <input type="text" name="total" id="total" value="0">
+            <input type = "submit" onsubmit="return false">
+            <input type="reset">
+        </form>
+
+    </div>
+
+</body>
 
 </html>
