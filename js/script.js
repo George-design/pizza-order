@@ -6,6 +6,12 @@ function PizzaPrice(totalSizePrice,crustType,toppingsTotalPrice,quantity){
 	this.quantity = quantity
 }
 
+PizzaPrice.prototype.calculatePizzaPrice = function() {
+	return this.quantity *(this.totalSizePrice + this.crustType + this.toppingsTotalPrice)
+}
+
+
+
 
 });
   
