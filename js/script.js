@@ -56,6 +56,7 @@ $('#pizz').submit(function(event){
 		}
 	}
 
+
 		getDelivery()
 	pizzaCost += deliveryCost
 
@@ -69,13 +70,7 @@ $('#pizz').submit(function(event){
 
 	$(".output").show();
 
-	$("#total").append("<li><span class='container'>" +"You selected " +toppingNames+"</span></li>");  
- 	$("#total").append("<li><span class='container'>" +"You orderd " + inputedNumberOfPizzas +" "+ inputedSizeName +""  + "</span></li>"); 
- 	$("#total").append("<li><span class='container'>" +"You selected " +selectedCrustName + "</span></li>");
- 	$("#total").append("<li><span class='container'>" +"Total cost is ksh: "+ totalCost+ " "+"</span></li>");
-
-
-
+	
 
   
 

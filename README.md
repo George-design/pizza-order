@@ -20,3 +20,5 @@ html
 css
 ###### LICENSE
 /home/george/Documents/moringa-school-projects/pizza-order/licence
+#### CONTACT
+E-mail davidmaryngotho@gmail.com
