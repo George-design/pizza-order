@@ -1,4 +1,4 @@
-//Backend
+
 function PizzaPrice(totalSizePrice,crustType,toppingsTotalPrice,quantity){
 	this.totalSizePrice = totalSizePrice,
 	this.crustType = crustType,
@@ -26,7 +26,7 @@ $('#pizz').submit(function(event){
 	 })
 
 	 totalSizePrice = selectedPizzaSizes.reduce((totalSizePrice,element) => totalSizePrice + element)
-	//  console.log(totalSizePrice)
+	
 
 
 	let selectedToppingPrices =[]
@@ -35,16 +35,15 @@ $('#pizz').submit(function(event){
 	})
 
 	toppingsTotalPrice = selectedToppingPrices.reduce((toppingsTotalPrice,topping) => toppingsTotalPrice + topping)
-	// console.log(toppingsTotalPrice)
-
+	
 	let pizzaQuantity = selectedPizzaSizes.length
 
-	//Create a new instance of the object PizzaPrice
+	
 	let newPizza = new PizzaPrice(totalSizePrice, selectedPizzaCrust,toppingsTotalPrice, pizzaQuantity)
 	let pizzaCost = newPizza.calculatePizzaPrice()
 
 
-	//Get the delivery info
+	
 	let delivery = $("input[name='delivery']:checked").val()
 	let deliveryCost=0 
 
@@ -60,8 +59,7 @@ $('#pizz').submit(function(event){
 		getDelivery()
 	pizzaCost += deliveryCost
 
-	// console.log(pizzaCost)
-
+	
 
 
 	$("#total").val(`${pizzaCost}`)
